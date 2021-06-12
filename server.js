@@ -12,6 +12,15 @@ mongoose.connect(process.env.DATABASE_URL, {
     useCreateIndex: true,
 });
 
+// Middleware
+app.use(express.urlencoded({ extended: true }));
+
+
+// Routes / Controllers
+const userController = require('./controllers/users');
+app.use('/users', userController);
+
+
 // Database Connection Error / Success
 const db = mongoose.connection;
 db.on('connected', () => console.log('Mongo is connected'));
