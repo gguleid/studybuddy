@@ -4,6 +4,11 @@ const  mongoose  = require('mongoose');
 const app = express();
 require('dotenv').config();
 
+const PORT = process.env.PORT || 3000;
+
+// Set default view engine 
+app.set('view engine', 'ejs');
+
 // Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
@@ -15,6 +20,8 @@ mongoose.connect(process.env.DATABASE_URL, {
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 
+// Home Route
+app.get('/', (req, res) => res.render('index.ejs'));
 
 // Routes / Controllers
 const userController = require('./controllers/users');
@@ -29,5 +36,4 @@ db.on('error', (err) => console.log(err.message + 'is mongod is not running?'));
 
 
 // Listener 
-const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
