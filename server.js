@@ -4,7 +4,7 @@ const  mongoose  = require('mongoose');
 const app = express();
 require('dotenv').config();
 const session = require('express-session');
-
+const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3000;
 
 // Set default view engine 
@@ -28,13 +28,20 @@ app.use(
         saveUninitialized: false
     }));
 
+app.use(methodOverride('_method'));
+
 // Home Route
 app.get('/', (req, res) => {
-	res.render('index.ejs', {
-		currentUser: req.session.currentUser
-	});
+	if (req.session.currentUser) {
+		res.render('dashboard.ejs', {
+			currentUser: req.session.currentUser
+		});
+	} else {
+		res.render('index.ejs', {
+			currentUser: req.session.currentUser
+		});
+	}
 });
-
 // Routes / Controllers
 const userController = require('./controllers/users');
 app.use('/users', userController);
