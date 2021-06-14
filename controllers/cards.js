@@ -4,12 +4,16 @@ const Card = require('../models/cards');
 
 // Index Route - Cards
 router.get('/', (req, res) => {
-	res.render('cards/index');
+	Card.find({}, (err, cards) => {
+        res.render('cards/index', { cards });
+    });
 });
 
 // New Route - New index cards
 router.get('/new', (req, res) => {
-	res.render('cards/new');
+    Card.find({}, (err, cards) => {
+        res.render('cards/new', { cards });
+    });
 });
 
 // Create route - Create Index Cards
