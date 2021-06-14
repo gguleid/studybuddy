@@ -3,6 +3,7 @@ const express = require('express');
 const  mongoose  = require('mongoose');
 const app = express();
 require('dotenv').config();
+const session = require('express-session');
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,6 +20,13 @@ mongoose.connect(process.env.DATABASE_URL, {
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
+
+app.use(
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: false
+    }));
 
 // Home Route
 app.get('/', (req, res) => res.render('index.ejs'));
