@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Create a New Index Card</title>
+</head>
+
+<body>
+	<header>
+		<h1>Create an Index Card</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/cards">Articles Index</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<form action="/cards" method="POST">
+			<input type="text" name="title" /><br />
+			<textarea name="body"></textarea><br />
+			<input type="submit" value="Publish Article" />
+		</form>
+	</main>
+</body>
+
+</html>

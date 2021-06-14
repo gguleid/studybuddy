@@ -49,6 +49,8 @@ app.use('/users', userController);
 const sessionController = require('./controllers/sessions');
 app.use('/sessions', sessionController);
 
+const cardsController = require('./controllers/cards');
+app.use('/cards', cardsController);
 
 
 // Database Connection Error / Success
