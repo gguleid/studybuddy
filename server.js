@@ -29,7 +29,11 @@ app.use(
     }));
 
 // Home Route
-app.get('/', (req, res) => res.render('index.ejs'));
+app.get('/', (req, res) => {
+	res.render('index.ejs', {
+		currentUser: req.session.currentUser
+	});
+});
 
 // Routes / Controllers
 const userController = require('./controllers/users');

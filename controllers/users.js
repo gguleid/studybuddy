@@ -6,6 +6,11 @@ const User = require('../models/user')
 
 
 // New (Sign up page)
+userRouter.get('/new', (req, res) => {
+	res.render('users/new.ejs', {
+		currentUser: req.session.currentUser
+	});
+});
 
 // Create (Sign up page)
 userRouter.post('/', (req, res) => {

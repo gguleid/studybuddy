@@ -6,10 +6,11 @@ const User = require('../models/user');
 
 
 // New (Login Page)
-sessionsRouter.get('/', (req, res) =>{
-    res.send("Login page");
+sessionsRouter.get('/new', (req, res) => {
+	res.render('sessions/new.ejs', {
+		currentUser: req.session.currentUser
+	});
 });
-    
 // Delete (Logout page)
 sessionsRouter.delete('/', (req, res) => {
     req.session.destroy((error) => {
