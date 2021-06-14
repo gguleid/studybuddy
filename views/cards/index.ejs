@@ -18,5 +18,17 @@
 				</ul>
 			</nav>
 		</header>
+		<main>
+			<h2>List of Articles</h2>
+			<ul>
+				<% cards.forEach(card => { %>
+					<li>
+						<a href="/cards/<%= card._id %>">
+							<%= card.title %>
+						</a>
+					</li>
+				<% }); %>
+			</ul>
+		</main>
 	</body>
 </html>
