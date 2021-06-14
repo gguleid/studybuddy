@@ -35,6 +35,10 @@ app.get('/', (req, res) => res.render('index.ejs'));
 const userController = require('./controllers/users');
 app.use('/users', userController);
 
+const sessionController = require('./controllers/sessions');
+app.use('/sessions', sessionController);
+
+
 
 // Database Connection Error / Success
 const db = mongoose.connection;
