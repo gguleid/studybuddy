@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Card = require('../models/cards');
+const User = require('../models/user');
+
 
 // Index Route - Cards
 router.get('/', (req, res) => {
@@ -23,12 +25,21 @@ router.post('/', (req, res) => {
 	});
 })
 
+// Delete Route 
+router.delete('/:id', (req, res) => {
+	Card.findByIdAndDelete(req.params.id, (err, cards) => {
+		res.redirect('/cards')
+	})
+});
+
+// Update Route
+
 
 // Show Route
-router.get('/', (req, res) => {
-	Card.find({}, (err, foundCards) => {
-		res.render('cards/index.ejs', {
-			cards: foundCards
+router.get('/:id', (req, res) => {
+	Card.findById(req.params.id, (err, foundCard) => {
+		res.render('cards/show.ejs', {
+			card: foundCard
 		});
 	});
 });

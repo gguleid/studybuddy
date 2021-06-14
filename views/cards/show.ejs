@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Study Buddy | <%= card.title %></title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/cards">Cards Index</a>
+        </nav>
+        <h1><%= card.title %></h1>
+    </header>
+    <%= card.body %>
+    <main>
+        <section>
+            <section>
+                <a href="/cards/<%=card._id%>/edit">Edit Card</a>
+                <form action="/cards/<%=card._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete card" />
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
