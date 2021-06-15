@@ -4,6 +4,7 @@ const  mongoose  = require('mongoose');
 const app = express();
 require('dotenv').config();
 const session = require('express-session');
+const Card = require('./models/cards');
 const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3000;
 
@@ -42,6 +43,7 @@ app.get('/', (req, res) => {
 		});
 	}
 });
+
 // Routes / Controllers
 const userController = require('./controllers/users');
 app.use('/users', userController);
