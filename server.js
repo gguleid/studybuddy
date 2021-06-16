@@ -33,24 +33,13 @@ app.use(methodOverride('_method'));
 
 // Home Route
 app.get('/', (req, res) => {
-	if (req.session.currentUser) {
-		res.render('dashboard.ejs', {
-			currentUser: req.session.currentUser
+	
+		res.render('home', {
+		
 		});
-	} else {
-		res.render('index.ejs', {
-			currentUser: req.session.currentUser
-		});
-	}
 });
 
 // Routes / Controllers
-const userController = require('./controllers/users');
-app.use('/users', userController);
-
-const sessionController = require('./controllers/sessions');
-app.use('/sessions', sessionController);
-
 const cardsController = require('./controllers/cards');
 app.use('/cards', cardsController);
 

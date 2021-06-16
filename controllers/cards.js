@@ -1,26 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const Card = require('../models/cards');
-const User = require('../models/user');
 const session = require('express-session');
 
 
 
 // Index Route - Cards
-router.get('/dashboard', (req, res) => {
+router.get('/', (req, res) => {
 	Card.find({}, (err, cards) => {
-        res.render('cards/dashboard', { cards });
+        res.render('cards/cards', { cards });
     });
 });
 
 // New Route - New index cards
 router.get('/new', (req, res) => {
-	User.find({}, (err, Users) => {
-    Card.find({}, (err, users) => {
-        res.render('cards/new', { users });
+    Card.find({}, (err, cards) => {
+        res.render('cards/newcards', { cards });
     });
 });
-});
+
 
 // Create route - Create Index Cards
 router.post('/', (req, res) => {
@@ -43,7 +41,7 @@ router.delete('/:id', (req, res) => {
 // Show Route
 router.get('/:id', (req, res) => {
 	Card.findById(req.params.id, (err, foundCard) => {
-		res.render('cards/show.ejs', {
+		res.render('cards/showcards', {
 			card: foundCard
 		});
 	});
