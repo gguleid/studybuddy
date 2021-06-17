@@ -20,14 +20,6 @@ router.get('/new', (req, res) => {
 });
 
 
-// Create route - Create Index Cards
-router.post('/', (req, res) => {
-	Card.create(req.body, (err, createdCard) => {
-		const createdBy = session.currentUser ;
-		res.redirect('/cards');
-	});
-})
-
 // Delete Route 
 router.delete('/:id', (req, res) => {
 	Card.findByIdAndDelete(req.params.id, (err, cards) => {
@@ -36,7 +28,26 @@ router.delete('/:id', (req, res) => {
 });
 
 // Update Route
+router.put('/:id', (req, res) => {
+    Card.findByIdAndUpdate(req.params.id, req.body, (err, card) => {
+        res.redirect('/cards')
+    })
+})
+// Create route - Create Index Cards
+router.post('/', (req, res) => {
+	Card.create(req.body, (err, createdCard) => {
+		res.redirect('/cards');
+	});
+})
 
+// Edit Route
+router.get('/:id/edit', (req, res) => {
+    Card.findById(req.params.id,(err, card) => {
+        res.render('cards/editcards', {
+            card
+        })
+    })
+})
 
 // Show Route
 router.get('/:id', (req, res) => {
