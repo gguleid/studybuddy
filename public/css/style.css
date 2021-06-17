@@ -1,3 +1,13 @@
+:root {
+  --bright-orange: #ff6c37;
+  --light-orange: #f5ac91;
+  --bright-green: #A0BE73;
+  --light-green: #c6d8ab;
+  --purple: #B67D9A;
+}
+
+
+
 
 * {
     box-sizing: border-box;
@@ -34,7 +44,8 @@ nav {
     background-color: #333;
     border-right: solid 10px;
     
-}.sidenav {
+}
+.sidenav {
     height: 100%;
     width: 200px;
     position: fixed;
@@ -43,6 +54,7 @@ nav {
     left: 0;
     background-color: #ff6c37;
     overflow-x: hidden;
+    border-bottom: solid 2px ;
   }
   .sidenav a {
     color: white;
@@ -72,10 +84,10 @@ nav {
     padding: 10px;
     width: 100%;
     height: 40px;
-    padding-top: 10px;
+   
     position: absolute;
     bottom: 0;
-    left: 0;
+    /* left: 0; */
     text-align: center;
     border-top: solid 5px;
     border-left: solid 1px;
@@ -178,15 +190,78 @@ nav {
   background-color: white;
   }
 
+  
+  
+  fieldset {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px ;
+    color:#1c272b;
+    width: 40%;
+  }
+  legend {
+    padding: 0px 10px;
+    font-family: 'Oswald';
+    font-weight: 500;
+    color: var(--purple);
+  }
+  label {
+    font-family: 'Oswald';
+    font-weight: 200;
+    color: var(--bright-orange);
+    display: block;
+  }
+  
+  input , textarea {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--light-green);
+    border-radius: 5px;
+  }
+  input:focus, textarea:focus {
+    /* the outline property selects the default blue border that shows up on inputs. giving it a value of 0 gets rid of it */
+    outline: 0;
+    border: 1px solid var(--purple);
+  }
+  
+  input[type="submit"]  {
+    width: 30%;
+    height: 50px;
+    background: var(--bright-orange);
+    box-shadow: 2px 2px var(--light-green);
+    font-family: 'Oswald';
+    font-size: 1.3em;
+    color: whitesmoke;
+    border: 0px;
+    transition: 0.2s ease-in-out;
+    align-items: center;
+  }
+
+
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background: var(--bright-green);
+    box-shadow: 2px 2px var(--light-orange);
+  }
+  
+  
+  /* using max-heights and max-widths to make it so that the user can only resize up to that point */
+  textarea {
+    resize: none;
+    height: 75px;
+  }
+  
+  
   .forms-buttons {
     display: inline; 
-    width: 100%;
-    height: 40px;
+    width: 15%;
+    height: 5px;
     bottom: 0;
     left: 0;
     text-align: center;
    
   }
-
-
-  

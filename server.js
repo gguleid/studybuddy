@@ -6,6 +6,7 @@ require('dotenv').config();
 const session = require('express-session');
 const Card = require('./models/cards');
 const methodOverride = require('method-override');
+const mongoURI = process.env.MONGODB_URI
 const PORT = process.env.PORT || 3000;
 
 // Set default view engine 

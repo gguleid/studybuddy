@@ -4,11 +4,14 @@
 	<%- include("../partials/header.ejs") %>
 	<main class="indexcards">
 		<form action="/cards" method="POST">
-			<input type="text" name="title" placeholder="Question"/><br />
-			<textarea name="body" placeholder="Answer"></textarea><br />
+			<fieldset class="card-info">
+			<legend>New Index Card</legend>
+			<input type="text" name="title" placeholder="Front of the Card"/><br />
+			<textarea name="body" placeholder="Back of the Card"></textarea><br />
 			<input type="url" name="source" placeholder="Source"/><br />
 			<input type="text" name="nameOfSource" placeholder="Source Name"/><br />
-			<input type="submit" value="Create card" />
+		</fieldset>
+			<input type="submit" value="Create card"  />
 		</form>
 	</main>
 </body>
