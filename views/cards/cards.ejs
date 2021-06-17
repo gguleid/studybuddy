@@ -20,6 +20,9 @@
 		</header>
 		<main>
 			<h2>Collection: </h2>
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
 			<ul>
 				<% cards.forEach(card => { %>
 					<li>
@@ -27,7 +30,14 @@
 							<%= card.title %>
 						</a>
 					</li>
+				</div>
+					<div class="flip-card-back">
+					<%=card.body%>
+				</div>
 				<% }); %>
+		</div>
+	</div>
+  
 			</ul>
 		</main>
 	</body>
