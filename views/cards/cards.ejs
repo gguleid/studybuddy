@@ -1,36 +1,37 @@
 <%- include("../partials/head") %>
+
 <body>
 	<link rel="stylesheet" href="/css/style.css">
 	<header>
-		<h1 class="header_h1"><img src="/imgs/studybuddy-icon.svg" class="studybuddy-icon"/>Study Buddy</h1>
+		<h1 class="header_h1"><img src="/imgs/studybuddy-icon.svg" class="studybuddy-icon" />Study Buddy</h1>
 		<nav class="sidenav">
-				<a href="/">Home</a>
-				<a href="/cards/new">Create Index Cards</a>
+			<a href="/">Home</a>
+			<a href="/cards/new">Create Index Cards</a>
 		</nav>
 	</header>
-		
-		<main class="indexcards">
-			<h2>Collection: </h2>
-			<ul>
-				<% cards.forEach(card => { %>
-					<div class="flip-card">
-						<div class="flip-card-inner">
-							<li>
+
+	<main class="indexcards-cards">
+		<h2>Collection: </h2>
+			<% cards.forEach(card => { %>
+			<div class="flip-card">
+				<div class="flip-card-inner">
 						<div class="flip-card-front">
 							<%= card.title %>
 						</div>
-					</li>
-					<div class="flip-card-back">
-						<p><%=card.body%></p>
-						<a href="/cards/<%= card._id %>">Read More</a>
-
+						<div class="flip-card-back">
+							<p><%=card.body%>
+								<a href="/cards/<%= card._id %>">Read More</a>
+							</p>
+						</div>
 					</div>
-				
+				</div>
 				<% }); %>
-		</div>
-	</div>
-  
-			</ul>
-		</main>
-	</body>
-</html>
+				
+		
+	</main>
+</body>
+<footer >
+	<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+			href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+	</html>

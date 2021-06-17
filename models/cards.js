@@ -6,7 +6,7 @@ const cardSchema = new Schema({
     body: String,
     video: String,
     source: String,
-    sourceName: String,
+    nameOfSource: String,
 }, { timestamps: true });
 
 const Card = mongoose.model('Card', cardSchema);

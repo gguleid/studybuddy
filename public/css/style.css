@@ -1,6 +1,7 @@
 
 * {
     box-sizing: border-box;
+   
   }
   
   body {
@@ -52,8 +53,8 @@ nav {
   
 
 .sidenav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #1c272b;
+    color: #ff6c37;
   }
 
 /* Home Page */
@@ -86,15 +87,19 @@ nav {
     padding-left:15%;
   }
   
-  .indexcards ul {
-    list-style-type: none; 
-  }
 
   .indexcards-show {
     padding-left:10%;
     font-size: x-large;
   }
   
+  .indexcards-cards {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding-left: 15%;
+    
+  }
   
   .flip-card {
     background-color: transparent;
@@ -102,6 +107,7 @@ nav {
     height: 200px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    
   }
   
   /* This container is needed to position the front and back side */
@@ -112,6 +118,8 @@ nav {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    
+   
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -126,34 +134,59 @@ nav {
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    
   }
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
-    background-color: #ffffff;
-    color: black;
+    background-color: #ff6c37;
+    color: white;
     font-size:x-large;
+    font-weight: bold;
+   padding-top: 25%;
+   padding-left: 3%;
   }
   
   /* Style the back side */
   .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color: white;
+    color: #1c272b;
     transform: rotateY(180deg);
   }
 
   /* Show page */
+  
   .forms {
-    display:inline;
-    background-color: white;
-    /* padding: 10px; */
+    /* display: inline; */
+    /* background-color: white; */
     width: 100%;
     height: 40px;
-  
-    position: absolute;
+   
     bottom: 0;
     left: 0;
     text-align: center;
-    border-top: solid 5px;
     border-left: solid 1px;
   }
+
+  .sources {
+  width: 60%;
+  margin-top: 35%;
+  margin-left: 10%;
+  border: solid 5px white;
+  color:#1c272b;
+  border-radius: 15px;
+  background-color: white;
+  }
+
+  .forms-buttons {
+    display: inline; 
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+   
+  }
+
+
+  
