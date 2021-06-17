@@ -1,20 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Buddy</title>
-</head>
+<%- include("./partials/head.ejs") %>
 <body>
-    <header>
-        <h1>Welcome to the Study Buddy!</h1>
-        <nav>
-
-                <a href="/cards">Cards</a>
-                <a href="/cards/new">Create</a>
-           
-        </nav>
-    </header>
+    <%- include("./partials/header.ejs") %>
+    <section class="colum.side">
+        <p>Lorem </p>
+    </section>
+    <main class="homepage">
+        <section class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, ipsum nihil illo, atque accusantium consectetur, quasi accusamus consequatur harum praesentium corporis eaque? Voluptates quos tempore dignissimos qui architecto, inventore consectetur.</p>
+        </section>
+        <section>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>John Doe</h1>
+                    <p>Architect & Engineer</p>
+                    <p>We love that guy</p>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    
 </body>
+<footer class="homepage-footer"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
 </html>
