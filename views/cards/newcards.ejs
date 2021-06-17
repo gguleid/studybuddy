@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<title>Create a New Index Card</title>
-</head>
+<%- include("../partials/head.ejs") %>
 
 <body>
-	<header>
-		<h1>Create an Index Card</h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/cards">Index Cards</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
+	<%- include("../partials/header.ejs") %>
+	<main class="indexcards">
 		<form action="/cards" method="POST">
 			<input type="text" name="title" placeholder="Question"/><br />
 			<textarea name="body" placeholder="Answer"></textarea><br />
+			<input type="text" name="source" placeholder="Source"/><br />
+			<input type="url" name="video" placeholder="Youtube videos"/><br />
 			<input type="submit" value="Create card" />
 		
 		</form>
