@@ -29,7 +29,7 @@ A simple web app for creating helpful study materials.
 
 ## Future Enhancements
 
-- Offer user login
+- User login
 - Enable upload of images 
 - Embeded videos
 - Multiple soruces 
