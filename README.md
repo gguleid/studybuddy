@@ -5,8 +5,11 @@ A simple web app for creating helpful study materials.
 
 - HTML5
 - CSS
-- JavaScript
-- Express
+- Node.js
+- Express.js
+- Heroku
+- MongoDB
+- Mongoose
 
 
 ## Screenshots
