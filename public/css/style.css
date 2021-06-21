@@ -274,3 +274,35 @@ nav {
     column-gap: 15px;
     row-gap: 15px;
   }
+
+  
+
+  
+  .first-p {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin-left: 10%;
+    border: solid whitesmoke;
+    color: #1c272b;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 15px;
+  }
+  
+  .second-p {
+  
+    width: 75%;
+    margin-left: 10%;
+    border: solid whitesmoke;
+    color: #1c272b;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    
+  }
+  
+.p-title {
+  color: #ff6c37;
+  font-size: 40px;
+  padding-bottom: 5px;
+}
