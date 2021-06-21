@@ -34,3 +34,6 @@ A simple web app for creating helpful study materials.
 - Embeded videos
 - Multiple soruces 
 - Folders for different subjects
+- Sections for Notepads
+- Share study guides 
+
