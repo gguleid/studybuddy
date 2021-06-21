@@ -17,6 +17,9 @@ A simple web app for creating helpful study materials.
 ![screenshot](public/imgs/Studybuddy.PNG)
 
 
+![screenshot](public/imgs/createabuddy.PNG)
+
+
 ## Getting Started
 
 [click here](https://gs-studybuddy.herokuapp.com/cards) to see working app
@@ -27,4 +30,4 @@ A simple web app for creating helpful study materials.
 - Enable upload of images 
 - Embeded videos
 - Multiple soruces 
-- Folders for different
+- Folders for different subjects
