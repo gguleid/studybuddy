@@ -22,7 +22,7 @@ A simple web app for creating helpful study materials.
 
 ## Getting Started
 
-[click here](https://gs-studybuddy.herokuapp.com/cards) to see working app
+[click here](https://gs-studybuddy.herokuapp.com) to see working app
 
 ## Future Enhancements
 
