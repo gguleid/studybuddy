@@ -11,15 +11,10 @@ A simple web app for creating helpful study materials.
 
 ## Screenshots
 
-### WireFrames
-<br>
-![screenshot](./imgs/wireframestudybuddy.PNG)
+### Website
 <br>
 
 ![screenshot](public/imgs/Studybuddy.PNG)
-<br>
-
-
 
 
 ## Getting Started
